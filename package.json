@@ -1,0 +1,16 @@
+{
+  "name": "htn2023",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cohere-ai": "^4.3.0",
+    "htmlparser2": "^8.0.1",
+    "jsdom": "^20.0.0"
+  }
+}
