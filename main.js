@@ -1,8 +1,9 @@
 const cohere = require('cohere-ai')
 const jsdom = require('jsdom')
 const htmlparser = require('htmlparser2')
-
-cohere.init("apikey")
+const express = require('express')
+const bodyParser = require('body-parser')
+cohere.init("A7ODki9WXU6BjiqecjGX8bHbsa8wT51lJdw7mk8P")
 
 const isToxic = async (listOfStr) => {
   for(value of listOfStr){
@@ -128,6 +129,8 @@ const censorYoutube = async (text) => {
 
 
 
+/*
+ testing
 fs = require('fs')
 data = fs.readFile("youtubeExample.html", "utf8", (err, data) => {
   if(!err){
@@ -138,3 +141,22 @@ data = fs.readFile("youtubeExample.html", "utf8", (err, data) => {
     throw new Error(err.toString())
   }
 })
+*/
+
+
+const app = express()
+
+
+app.post("/",bodyParser.text({limit: '5mb'}), (req,res) => {
+  const html = req.body
+  censorYoutube(html).then((censoredHtml) => {
+    res.send(censoredHtml)
+  })
+})
+
+const port = 3000
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+
+
