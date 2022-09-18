@@ -1,1 +1,0 @@
-{"version":3,"file":"background-wrapper.bundle.js","mappings":";;;;;AAAA;AACA;AACA;AACA;AACA","sources":["webpack://shortlinks-extension/./compat/background-wrapper.js"],"sourcesContent":["try {\n  importScripts(\"background.bundle.js\");\n} catch (e) {\n  console.error(e);\n}\n"],"names":[],"sourceRoot":""}
