@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="switch.css">
+  <script defer src="popup.bundle.js"></script></head>
+  <body>
+	  <div>
+		<img src="[object Module]" alt="" id="Logo">
+	  </div>
+	<div>
+		<label class="switch">
+			<input type="checkbox">
+			<span class="slider round"></span>
+		  </label>
+	</div>
+
+	<script>
+
+	console.log("hello");
+
+	var checkbox = document.querySelector('input[type="checkbox"]');
+
+
+	//var checkbox = document.querySelector('input[type="checkbox"]');
+	var markup = document.documentElement.innerHTML;
+
+	checkbox.addEventListener('change', function () {
+	if (OnClickData.checked) {
+		// do thiss
+		console.log('Checked');
+	} else {
+		// do that
+		console.log('Not checked');
+	}
+	});
+
+	</script>
+  
+  </body>
+</html>
+
